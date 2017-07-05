@@ -1,0 +1,572 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B005563A1F0C731700870BBF /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = B00556391F0C731700870BBF /* Model.m */; };
+		B0A57E5C1F0BA8A1004D7307 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A57E5B1F0BA8A1004D7307 /* main.m */; };
+		B0A57E5F1F0BA8A1004D7307 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A57E5E1F0BA8A1004D7307 /* AppDelegate.m */; };
+		B0A57E621F0BA8A1004D7307 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A57E611F0BA8A1004D7307 /* ViewController.m */; };
+		B0A57E651F0BA8A1004D7307 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0A57E631F0BA8A1004D7307 /* Main.storyboard */; };
+		B0A57E671F0BA8A1004D7307 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0A57E661F0BA8A1004D7307 /* Assets.xcassets */; };
+		B0A57E6A1F0BA8A1004D7307 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0A57E681F0BA8A1004D7307 /* LaunchScreen.storyboard */; };
+		B0A57E751F0BA8A1004D7307 /* DaxiamiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A57E741F0BA8A1004D7307 /* DaxiamiTests.m */; };
+		B0A57E801F0BA8A1004D7307 /* DaxiamiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A57E7F1F0BA8A1004D7307 /* DaxiamiUITests.m */; };
+		B0A57E951F0BA92C004D7307 /* TmfCalendarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A57E901F0BA92C004D7307 /* TmfCalendarModel.m */; };
+		B0A57E961F0BA92C004D7307 /* TmfCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A57E921F0BA92C004D7307 /* TmfCalendarView.m */; };
+		B0A57E971F0BA92C004D7307 /* TmfCalendarViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A57E941F0BA92C004D7307 /* TmfCalendarViewCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B0A57E711F0BA8A1004D7307 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0A57E4F1F0BA8A1004D7307 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0A57E561F0BA8A1004D7307;
+			remoteInfo = Daxiami;
+		};
+		B0A57E7C1F0BA8A1004D7307 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0A57E4F1F0BA8A1004D7307 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0A57E561F0BA8A1004D7307;
+			remoteInfo = Daxiami;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B00556381F0C731700870BBF /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		B00556391F0C731700870BBF /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
+		B0A57E571F0BA8A1004D7307 /* Daxiami.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Daxiami.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0A57E5B1F0BA8A1004D7307 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B0A57E5D1F0BA8A1004D7307 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B0A57E5E1F0BA8A1004D7307 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B0A57E601F0BA8A1004D7307 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B0A57E611F0BA8A1004D7307 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B0A57E641F0BA8A1004D7307 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B0A57E661F0BA8A1004D7307 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B0A57E691F0BA8A1004D7307 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B0A57E6B1F0BA8A1004D7307 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0A57E701F0BA8A1004D7307 /* DaxiamiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DaxiamiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0A57E741F0BA8A1004D7307 /* DaxiamiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DaxiamiTests.m; sourceTree = "<group>"; };
+		B0A57E761F0BA8A1004D7307 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0A57E7B1F0BA8A1004D7307 /* DaxiamiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DaxiamiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0A57E7F1F0BA8A1004D7307 /* DaxiamiUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DaxiamiUITests.m; sourceTree = "<group>"; };
+		B0A57E811F0BA8A1004D7307 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0A57E8F1F0BA92C004D7307 /* TmfCalendarModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TmfCalendarModel.h; sourceTree = "<group>"; };
+		B0A57E901F0BA92C004D7307 /* TmfCalendarModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TmfCalendarModel.m; sourceTree = "<group>"; };
+		B0A57E911F0BA92C004D7307 /* TmfCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TmfCalendarView.h; sourceTree = "<group>"; };
+		B0A57E921F0BA92C004D7307 /* TmfCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TmfCalendarView.m; sourceTree = "<group>"; };
+		B0A57E931F0BA92C004D7307 /* TmfCalendarViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TmfCalendarViewCell.h; sourceTree = "<group>"; };
+		B0A57E941F0BA92C004D7307 /* TmfCalendarViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TmfCalendarViewCell.m; sourceTree = "<group>"; };
+		B0A57F081F0BAA07004D7307 /* Daxiami.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Daxiami.pch; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B0A57E541F0BA8A1004D7307 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0A57E6D1F0BA8A1004D7307 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0A57E781F0BA8A1004D7307 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B0A57E4E1F0BA8A1004D7307 = {
+			isa = PBXGroup;
+			children = (
+				B0A57E591F0BA8A1004D7307 /* Daxiami */,
+				B0A57E731F0BA8A1004D7307 /* DaxiamiTests */,
+				B0A57E7E1F0BA8A1004D7307 /* DaxiamiUITests */,
+				B0A57E581F0BA8A1004D7307 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B0A57E581F0BA8A1004D7307 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B0A57E571F0BA8A1004D7307 /* Daxiami.app */,
+				B0A57E701F0BA8A1004D7307 /* DaxiamiTests.xctest */,
+				B0A57E7B1F0BA8A1004D7307 /* DaxiamiUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B0A57E591F0BA8A1004D7307 /* Daxiami */ = {
+			isa = PBXGroup;
+			children = (
+				B0A57E5D1F0BA8A1004D7307 /* AppDelegate.h */,
+				B0A57E5E1F0BA8A1004D7307 /* AppDelegate.m */,
+				B0A57E601F0BA8A1004D7307 /* ViewController.h */,
+				B0A57E611F0BA8A1004D7307 /* ViewController.m */,
+				B00556381F0C731700870BBF /* Model.h */,
+				B00556391F0C731700870BBF /* Model.m */,
+				B0A57E8E1F0BA92C004D7307 /* TmfCalendar */,
+				B0A57F081F0BAA07004D7307 /* Daxiami.pch */,
+				B0A57E631F0BA8A1004D7307 /* Main.storyboard */,
+				B0A57E661F0BA8A1004D7307 /* Assets.xcassets */,
+				B0A57E681F0BA8A1004D7307 /* LaunchScreen.storyboard */,
+				B0A57E6B1F0BA8A1004D7307 /* Info.plist */,
+				B0A57E5A1F0BA8A1004D7307 /* Supporting Files */,
+			);
+			path = Daxiami;
+			sourceTree = "<group>";
+		};
+		B0A57E5A1F0BA8A1004D7307 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B0A57E5B1F0BA8A1004D7307 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B0A57E731F0BA8A1004D7307 /* DaxiamiTests */ = {
+			isa = PBXGroup;
+			children = (
+				B0A57E741F0BA8A1004D7307 /* DaxiamiTests.m */,
+				B0A57E761F0BA8A1004D7307 /* Info.plist */,
+			);
+			path = DaxiamiTests;
+			sourceTree = "<group>";
+		};
+		B0A57E7E1F0BA8A1004D7307 /* DaxiamiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B0A57E7F1F0BA8A1004D7307 /* DaxiamiUITests.m */,
+				B0A57E811F0BA8A1004D7307 /* Info.plist */,
+			);
+			path = DaxiamiUITests;
+			sourceTree = "<group>";
+		};
+		B0A57E8E1F0BA92C004D7307 /* TmfCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				B0A57E8F1F0BA92C004D7307 /* TmfCalendarModel.h */,
+				B0A57E901F0BA92C004D7307 /* TmfCalendarModel.m */,
+				B0A57E911F0BA92C004D7307 /* TmfCalendarView.h */,
+				B0A57E921F0BA92C004D7307 /* TmfCalendarView.m */,
+				B0A57E931F0BA92C004D7307 /* TmfCalendarViewCell.h */,
+				B0A57E941F0BA92C004D7307 /* TmfCalendarViewCell.m */,
+			);
+			path = TmfCalendar;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B0A57E561F0BA8A1004D7307 /* Daxiami */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0A57E841F0BA8A1004D7307 /* Build configuration list for PBXNativeTarget "Daxiami" */;
+			buildPhases = (
+				B0A57E531F0BA8A1004D7307 /* Sources */,
+				B0A57E541F0BA8A1004D7307 /* Frameworks */,
+				B0A57E551F0BA8A1004D7307 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Daxiami;
+			productName = Daxiami;
+			productReference = B0A57E571F0BA8A1004D7307 /* Daxiami.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B0A57E6F1F0BA8A1004D7307 /* DaxiamiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0A57E871F0BA8A1004D7307 /* Build configuration list for PBXNativeTarget "DaxiamiTests" */;
+			buildPhases = (
+				B0A57E6C1F0BA8A1004D7307 /* Sources */,
+				B0A57E6D1F0BA8A1004D7307 /* Frameworks */,
+				B0A57E6E1F0BA8A1004D7307 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B0A57E721F0BA8A1004D7307 /* PBXTargetDependency */,
+			);
+			name = DaxiamiTests;
+			productName = DaxiamiTests;
+			productReference = B0A57E701F0BA8A1004D7307 /* DaxiamiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B0A57E7A1F0BA8A1004D7307 /* DaxiamiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0A57E8A1F0BA8A1004D7307 /* Build configuration list for PBXNativeTarget "DaxiamiUITests" */;
+			buildPhases = (
+				B0A57E771F0BA8A1004D7307 /* Sources */,
+				B0A57E781F0BA8A1004D7307 /* Frameworks */,
+				B0A57E791F0BA8A1004D7307 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B0A57E7D1F0BA8A1004D7307 /* PBXTargetDependency */,
+			);
+			name = DaxiamiUITests;
+			productName = DaxiamiUITests;
+			productReference = B0A57E7B1F0BA8A1004D7307 /* DaxiamiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B0A57E4F1F0BA8A1004D7307 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "大虾咪";
+				TargetAttributes = {
+					B0A57E561F0BA8A1004D7307 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = K8498HH4D2;
+						ProvisioningStyle = Automatic;
+					};
+					B0A57E6F1F0BA8A1004D7307 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B0A57E561F0BA8A1004D7307;
+					};
+					B0A57E7A1F0BA8A1004D7307 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B0A57E561F0BA8A1004D7307;
+					};
+				};
+			};
+			buildConfigurationList = B0A57E521F0BA8A1004D7307 /* Build configuration list for PBXProject "Daxiami" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B0A57E4E1F0BA8A1004D7307;
+			productRefGroup = B0A57E581F0BA8A1004D7307 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B0A57E561F0BA8A1004D7307 /* Daxiami */,
+				B0A57E6F1F0BA8A1004D7307 /* DaxiamiTests */,
+				B0A57E7A1F0BA8A1004D7307 /* DaxiamiUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B0A57E551F0BA8A1004D7307 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0A57E6A1F0BA8A1004D7307 /* LaunchScreen.storyboard in Resources */,
+				B0A57E671F0BA8A1004D7307 /* Assets.xcassets in Resources */,
+				B0A57E651F0BA8A1004D7307 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0A57E6E1F0BA8A1004D7307 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0A57E791F0BA8A1004D7307 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B0A57E531F0BA8A1004D7307 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0A57E971F0BA92C004D7307 /* TmfCalendarViewCell.m in Sources */,
+				B0A57E621F0BA8A1004D7307 /* ViewController.m in Sources */,
+				B0A57E961F0BA92C004D7307 /* TmfCalendarView.m in Sources */,
+				B0A57E5F1F0BA8A1004D7307 /* AppDelegate.m in Sources */,
+				B005563A1F0C731700870BBF /* Model.m in Sources */,
+				B0A57E5C1F0BA8A1004D7307 /* main.m in Sources */,
+				B0A57E951F0BA92C004D7307 /* TmfCalendarModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0A57E6C1F0BA8A1004D7307 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0A57E751F0BA8A1004D7307 /* DaxiamiTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0A57E771F0BA8A1004D7307 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0A57E801F0BA8A1004D7307 /* DaxiamiUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B0A57E721F0BA8A1004D7307 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0A57E561F0BA8A1004D7307 /* Daxiami */;
+			targetProxy = B0A57E711F0BA8A1004D7307 /* PBXContainerItemProxy */;
+		};
+		B0A57E7D1F0BA8A1004D7307 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0A57E561F0BA8A1004D7307 /* Daxiami */;
+			targetProxy = B0A57E7C1F0BA8A1004D7307 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B0A57E631F0BA8A1004D7307 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0A57E641F0BA8A1004D7307 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B0A57E681F0BA8A1004D7307 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0A57E691F0BA8A1004D7307 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B0A57E821F0BA8A1004D7307 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Daxiami/Daxiami.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B0A57E831F0BA8A1004D7307 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Daxiami/Daxiami.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B0A57E851F0BA8A1004D7307 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K8498HH4D2;
+				INFOPLIST_FILE = Daxiami/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = d.Daxiami;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B0A57E861F0BA8A1004D7307 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K8498HH4D2;
+				INFOPLIST_FILE = Daxiami/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = d.Daxiami;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B0A57E881F0BA8A1004D7307 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DaxiamiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = d.DaxiamiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Daxiami.app/Daxiami";
+			};
+			name = Debug;
+		};
+		B0A57E891F0BA8A1004D7307 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DaxiamiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = d.DaxiamiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Daxiami.app/Daxiami";
+			};
+			name = Release;
+		};
+		B0A57E8B1F0BA8A1004D7307 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DaxiamiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = d.DaxiamiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Daxiami;
+			};
+			name = Debug;
+		};
+		B0A57E8C1F0BA8A1004D7307 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DaxiamiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = d.DaxiamiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Daxiami;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B0A57E521F0BA8A1004D7307 /* Build configuration list for PBXProject "Daxiami" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0A57E821F0BA8A1004D7307 /* Debug */,
+				B0A57E831F0BA8A1004D7307 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0A57E841F0BA8A1004D7307 /* Build configuration list for PBXNativeTarget "Daxiami" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0A57E851F0BA8A1004D7307 /* Debug */,
+				B0A57E861F0BA8A1004D7307 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0A57E871F0BA8A1004D7307 /* Build configuration list for PBXNativeTarget "DaxiamiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0A57E881F0BA8A1004D7307 /* Debug */,
+				B0A57E891F0BA8A1004D7307 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0A57E8A1F0BA8A1004D7307 /* Build configuration list for PBXNativeTarget "DaxiamiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0A57E8B1F0BA8A1004D7307 /* Debug */,
+				B0A57E8C1F0BA8A1004D7307 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B0A57E4F1F0BA8A1004D7307 /* Project object */;
+}
