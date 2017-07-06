@@ -16,10 +16,11 @@ typedef void(^DateBlock)(NSInteger,NSInteger);
 @property(nonatomic, assign) NSInteger currentIndex;
 @property(nonatomic, assign) NSInteger lastMonthIndex;
 @property(nonatomic, assign) NSInteger nextMonthIndex;////下个月的index和
+@property(nonatomic, strong) NSMutableArray *chineseDate;//阴历
 
-
-//每个日期表 显示的具体天数 从几号开始 到几号 结束
+//（阳历）每个日期表 显示的具体天数 从几号开始 到几号 结束
 - (NSMutableArray *)getDayArray ;
+
 
 //上个月的
 - (NSMutableArray *)getLastDayArray;

@@ -19,7 +19,9 @@ static NSString *const footerId = @"footerId";
 
 @property(nonatomic, strong) UICollectionViewFlowLayout *customLayout;
 @property(nonatomic, strong) UICollectionView *collectionView;
-@property(nonatomic, strong) NSMutableArray *dayArr;
+@property(nonatomic, strong) NSMutableArray *dayArr;//阳历
+@property(nonatomic, strong) NSMutableArray *chineseArr;//农历
+
 @property(nonatomic, strong) TmfCalendarModel *calendarModel;
 @property(nonatomic, strong) UITextField *textField;
 @property(nonatomic, strong) UIButton *nextBtn;
@@ -40,6 +42,20 @@ static NSString *const footerId = @"footerId";
     NSInteger nextMonthIndex;
 }
 
+- (NSMutableArray *)dayArr{
+    if (!_dayArr) {
+        _dayArr = [[NSMutableArray alloc] init];
+    }
+    return _dayArr;
+}
+
+- (NSMutableArray *)chineseArr{
+    if (!_chineseArr) {
+        _chineseArr = [[NSMutableArray alloc] init];
+    }
+    return _chineseArr;
+}
+
 - (void)initCollectionView{
     
 
@@ -49,7 +65,16 @@ static NSString *const footerId = @"footerId";
     _calendarModel.dateBlock = ^(NSInteger year, NSInteger month) {
         weakSelf.titleLb.text = [NSString stringWithFormat:@"%ld年%ld月",year,month];
     };
-    self.dayArr = [NSMutableArray arrayWithArray:_calendarModel.getDayArray];
+
+    self.dayArr = _calendarModel.getDayArray;
+    NSArray *arr = [NSArray arrayWithArray:self.dayArr];
+    [arr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+
+    [self.chineseArr addObject:[self getChineseCalendarWithDate:obj]];
+        
+    }];
+    
+    
     currentIndex = _calendarModel.currentIndex;
     lastMonthIndex = _calendarModel.lastMonthIndex;
     nextMonthIndex = _calendarModel.nextMonthIndex;
@@ -90,7 +115,7 @@ static NSString *const footerId = @"footerId";
 }
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
 {
-    return (CGSize){kScreenWidth,84};
+    return (CGSize){kScreenWidth,100};
 }
 
 
@@ -107,7 +132,7 @@ static NSString *const footerId = @"footerId";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     
-    NSLog(@"%@",self.dayArr);
+//    NSLog(@"self.dayarr:%s %@",__func__,self.dayArr);
     
     return self.dayArr.count;
     
@@ -161,13 +186,13 @@ static NSString *const footerId = @"footerId";
 
         
     
-    
-    NSString *contextString = [[NSUserDefaults standardUserDefaults] objectForKey:self.dayArr[indexPath.row]];
-        if(contextString.length>0 ){
-            cell.contextLabel.text = contextString;
-        }else{
-            cell.contextLabel.text = @"";
-        }
+    cell.contextLabel.text = self.chineseArr[indexPath.row];
+//    NSString *contextString = [[NSUserDefaults standardUserDefaults] objectForKey:self.dayArr[indexPath.row]];
+//        if(contextString.length>0 ){
+//            cell.contextLabel.text = contextString;
+//        }else{
+//            cell.contextLabel.text = @"";
+//        }
     return cell;
 }
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
@@ -179,7 +204,6 @@ static NSString *const footerId = @"footerId";
         #pragma mark - =========上个月  下个月 =========
         CGFloat width = self.bounds.size.width/7.0;
         
-
         static dispatch_once_t onceToken;
         dispatch_once(&onceToken, ^{
             for (int i = 0; i<self.weekArr.count; i++) {
@@ -187,7 +211,7 @@ static NSString *const footerId = @"footerId";
                 UILabel *_weekLabel = [[UILabel alloc] init];
                 _weekLabel.textAlignment = NSTextAlignmentCenter;
 
-                _weekLabel.frame = CGRectMake(0+width*i, 50,width, 30);
+                _weekLabel.frame = CGRectMake(0+width*i, 60,width, 30);
                 _weekLabel.text = self.weekArr[i];
                 [headerView addSubview:_weekLabel];
                 
@@ -269,7 +293,17 @@ static NSString *const footerId = @"footerId";
 - (void)nextMonthAction {
     
     [self.dayArr removeAllObjects];
+    [self.chineseArr removeAllObjects];
+
     self.dayArr = [self.calendarModel getNextDayArray];
+
+    [self.dayArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [self.chineseArr addObject:[self getChineseCalendarWithDate:obj]];
+        
+    }];
+    
+    
+
     lastMonthIndex = _calendarModel.lastMonthIndex;
     nextMonthIndex = _calendarModel.nextMonthIndex;
     [self.collectionView reloadData];
@@ -277,7 +311,18 @@ static NSString *const footerId = @"footerId";
 }
 - (void)lastMonthAction {
     [self.dayArr removeAllObjects];
+    [self.chineseArr removeAllObjects];
     self.dayArr = [self.calendarModel getLastDayArray];
+        NSLog(@"self.dayArr:%@",self.dayArr);
+
+    [self.dayArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSLog(@"objobjobjobj:%@",obj);
+
+        [self.chineseArr addObject:[self getChineseCalendarWithDate:obj]];
+        
+    }];
+    
+    
     lastMonthIndex = _calendarModel.lastMonthIndex;
     nextMonthIndex = _calendarModel.nextMonthIndex;
     [self.collectionView reloadData];
@@ -405,6 +450,57 @@ static NSString *const footerId = @"footerId";
     }
 }
 
+#pragma mark - 计算农历 期
+-(NSString*)getChineseCalendarWithDate:(NSString*)date{
+    
+    NSArray *chineseYears = [NSArray arrayWithObjects:
+                             @"甲子", @"乙丑", @"丙寅", @"丁卯",  @"戊辰",  @"己巳",  @"庚午",  @"辛未",  @"壬申",  @"癸酉",
+                             @"甲戌",   @"乙亥",  @"丙子",  @"丁丑", @"戊寅",   @"己卯",  @"庚辰",  @"辛己",  @"壬午",  @"癸未",
+                             @"甲申",   @"乙酉",  @"丙戌",  @"丁亥",  @"戊子",  @"己丑",  @"庚寅",  @"辛卯",  @"壬辰",  @"癸巳",
+                             @"甲午",   @"乙未",  @"丙申",  @"丁酉",  @"戊戌",  @"己亥",  @"庚子",  @"辛丑",  @"壬寅",  @"癸丑",
+                             @"甲辰",   @"乙巳",  @"丙午",  @"丁未",  @"戊申",  @"己酉",  @"庚戌",  @"辛亥",  @"壬子",  @"癸丑",
+                             @"甲寅",   @"乙卯",  @"丙辰",  @"丁巳",  @"戊午",  @"己未",  @"庚申",  @"辛酉",  @"壬戌",  @"癸亥", nil];
+    
+    NSArray *chineseMonths=[NSArray arrayWithObjects:
+                            @"正月", @"二月", @"三月", @"四月", @"五月", @"六月", @"七月", @"八月",
+                            @"九月", @"十月", @"冬月", @"腊月", nil];
+    
+    
+    NSArray *chineseDays=[NSArray arrayWithObjects:
+                          @"初一", @"初二", @"初三", @"初四", @"初五", @"初六", @"初七", @"初八", @"初九", @"初十",
+                          @"十一", @"十二", @"十三", @"十四", @"十五", @"十六", @"十七", @"十八", @"十九", @"二十",
+                          @"廿一", @"廿二", @"廿三", @"廿四", @"廿五", @"廿六", @"廿七", @"廿八", @"廿九", @"三十",  nil];
+    
+    
+    //    [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+    
+    NSDate *dateTemp = nil;
+    
+    NSDateFormatter *dateFormater = [[NSDateFormatter alloc]init];
+    
+    [dateFormater setDateFormat:@"yyyyMMdd"];
+    
+    dateTemp = [dateFormater dateFromString:date];
+    
+    NSCalendar *localeCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierChinese];
+    
+    unsigned unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth |  NSCalendarUnitDay;
+    
+    NSDateComponents *localeComp = [localeCalendar components:unitFlags fromDate:dateTemp];
+    
+//    NSLog(@"year:%d_month:%d_day:%d  date%@",localeComp.year,localeComp.month,localeComp.day, localeComp.date);
+    
+    NSString *y_str = [chineseYears objectAtIndex:localeComp.year-1];
+    NSString *m_str = [chineseMonths objectAtIndex:localeComp.month-1];
+    NSString *d_str = [chineseDays objectAtIndex:localeComp.day-1];
+    
+    if ([d_str isEqualToString:@"初一"]) {
+        d_str = m_str;
+    }
+    NSString *chineseCal_str =d_str;//[NSString stringWithFormat: @"%@_%@_%@",y_str,m_str,d_str];
+    
+    return chineseCal_str;
+}
 
 /**
  *  计算字符个数(一个汉字等于两个字符)

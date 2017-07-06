@@ -134,12 +134,17 @@
     //计算本月最后一天是周几
    NSInteger currentWeekLastDay = [self currentMonthLastDayInWeek];
     
+   
     //下个月空出的天数
     NSInteger lastMonth=0;
     NSInteger lastYear=0;
+    
     if (_month == 1) {
         lastMonth = 12;
         lastYear = _year-1;
+    }else if(_month == 12){
+        lastMonth = 1;
+        lastYear = _year+1;
     }else {
         lastYear = _year;
         lastMonth = _month+1;
